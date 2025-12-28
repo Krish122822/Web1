@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Roo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bg="lock">
+
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+<!-- BACKGROUND -->
+<div class="background">
+  <div class="layer back"></div>
+</div>
+
+<div id="slider">
+
+<!-- PAGE 0 -->
+<section class="page lock">
+  <h1>What do I call you?</h1>
+  <input id="nickname" placeholder="Nickname">
+  <button onclick="checkNickname()">Enter</button>
+</section>
+
+<!-- PAGE 1 -->
+<section class="page lock">
+  <h1>What is my name?</h1>
+  <input id="realname" placeholder="Your answer">
+  <button onclick="checkName()">Unlock</button>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page intro" data-bg="intro">
+  <h1>My Dear Roo</h1>
+
+  <div class="stack" onclick="startExperience()">
+      <div class="env"></div>
+      <div class="env"></div>
+      <div class="env"></div>
+    </div>
+
+  <p>Tap to open your letters</p>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page select">
+  <div class="letter-grid">
+    <img src="assets/envelope.png" class="letter" onclick="openLetter(0,this)">
+    <img src="assets/envelope.png" class="letter" onclick="openLetter(1,this)">
+    <img src="assets/envelope.png" class="letter" onclick="openLetter(2,this)">
+    <img src="assets/envelope.png" class="letter" onclick="openLetter(3,this)">
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page reader">
+  <div class="envelope-wrapper">
+    <img id="envelopeImg" src="assets/envelope.png">
+    <img id="waxSeal" src="assets/wax.png" onclick="breakSeal()">
+  </div>
+
+  <div class="paper hidden">
+    <p id="letterText"></p>
+    <button onclick="closeLetter()">Back</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page postcard">
+  <div class="postcard-inner">
+    <h2>For You Roo💙</h2>
+    <p>You are my calm. 
+       My happiest thought.</p>
+  </div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
